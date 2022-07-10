@@ -1,0 +1,10 @@
+.config/nvim:
+  type: archive
+  url: https://github.com/NvChad/NvChad/archive/main.tar.gz
+  stripComponents: 1
+
+{{ $nerd_fonts_version := (gitHubLatestRelease "ryanoasis/nerd-fonts").TagName -}}
+.local/share/fonts/jetbrains-mono:
+  type: archive
+  url: https://github.com/ryanoasis/nerd-fonts/releases/download/{{ $nerd_fonts_version }}/JetBrainsMono.zip
+  exact: true
